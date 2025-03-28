@@ -12,7 +12,7 @@ google_genai_key = "AIzaSyAV60kxvHGel5ok_LwFLEOB05GaoHin1s8"
 
 # Configure the Google Gemini API with the loaded API key
 genai.configure(api_key=google_genai_key)
-model = genai.GenerativeModel(model_name="gemini-2.0-flash-latest")
+model = genai.GenerativeModel(model_name="gemini-2.0-flash")
 
 with st.sidebar:
     st.title("Select an image")  # Sidebar title
