@@ -8,7 +8,7 @@ st.set_page_config(page_title="OCR App", initial_sidebar_state="expanded", layou
 st.title("OCR Using Gemini Flash") 
 
 # Fetch the Google API key from environment variables
-google_genai_key = "AIzaSyAV60kxvHGel5ok_LwFLEOB05GaoHin1s8"
+google_genai_key = os.getenv("GOOGLE_API_KEY")
 
 # Configure the Google Gemini API with the loaded API key
 genai.configure(api_key=google_genai_key)
