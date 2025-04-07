@@ -27,10 +27,14 @@ if uploaded_file:
             try:
                 prompt = """Analyse the image provided and identify any wall defects. Describe the defects in detail including
                 any potential root causes, and recommended corrections. In case the image does not have a wall, 
-                describe the image and request another image that has a wall avaialable. 
+                describe the image. 
                 Present the extracted content in a well-organized Markdown format. 
                 Ensure proper formatting by using headings, bullet points, numbered lists, 
-                and code blocks where appropriate to enhance clarity and readability. """
+                and code blocks where appropriate to enhance clarity and readability. 
+                Retain the structure of the original content, ensuring that sections, titles, 
+                and important details are clearly separated. If the image contains any tables or 
+                code snippets, format them correctly to preserve their meaning. 
+                The output should be clear, concise, and easy to interpret. """
                 
                 inputs = [prompt]
                 inputs.append(image)
