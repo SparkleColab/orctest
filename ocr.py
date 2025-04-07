@@ -39,7 +39,7 @@ if uploaded_file:
             except Exception as e:
                 st.error(f"Error processing image: {str(e)}")
 
-if 'ocr_extracted_text' in st.session_state:
+if 'wall_defects' in st.session_state:
     st.markdown(st.session_state['wall_defects'])  # Display the extracted text in Markdown format
 else:
     st.info("Upload an image and press 'Detect Wall Defects'.") 
