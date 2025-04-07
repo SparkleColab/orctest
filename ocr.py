@@ -38,7 +38,7 @@ if uploaded_file:
                 st.session_state['wall_defects'] = response.text
             except Exception as e:
                 st.error(f"Error processing image: {str(e)}")
-
+print('Processing Complete')
 if 'wall_defects' in st.session_state:
     st.markdown(st.session_state['wall_defects'])  # Display the extracted text in Markdown format
 else:
