@@ -4,7 +4,7 @@ import streamlit as st
 import os  
 
 # Set the initial configuration for the Streamlit app
-st.set_page_config(page_title="OCR App", initial_sidebar_state="expanded", layout="wide") 
+st.set_page_config(page_title="Wall Defect App", initial_sidebar_state="expanded", layout="wide") 
 st.title("Wall Defect Detection") 
 
 # Fetch the Google API key from environment variables
@@ -22,7 +22,7 @@ with st.sidebar:
         st.image(image, caption='Uploaded Image') 
 
 if uploaded_file:
-    if st.button("Extract Text", type="primary"):
+    if st.button("Detect Wall Defects", type="primary"):
         with st.spinner("Processing image..."):  # Show a spinner while processing
             try:
                 prompt = """Analyse the image provided and identify any wall defects. Describe the defects in detail including
@@ -42,4 +42,4 @@ if uploaded_file:
 if 'ocr_extracted_text' in st.session_state:
     st.markdown(st.session_state['wall_defects'])  # Display the extracted text in Markdown format
 else:
-    st.info("Upload an image and press 'Extract Text'.") 
+    st.info("Upload an image and press 'Detect Wall Defects'.") 
